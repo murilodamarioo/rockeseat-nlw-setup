@@ -22,7 +22,7 @@ export function NewHabitForm() {
     event.preventDefault()
 
     if(!title || weekDays.length === 0) {
-      return
+      return alert('Existem campos que não foram preenchidos!')
     }
 
     await api.post('habits', {
